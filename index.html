@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somatório de Divisíveis por 3 ou 5</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #ffeb3b; /* Amarelo */
+    }
+
+    .container {
+      text-align: center;
+      background-color: #ff9800; /* Laranja */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #e91e63; /* Rosa */
+    }
+
+    label {
+      margin-right: 8px;
+      color: #e91e63; /* Rosa */
+    }
+
+    input {
+      padding: 12px;
+      font-size: 18px;
+      border: 1px solid #f44336; /* Vermelho */
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #4caf50; /* Verde */
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388e3c; /* Verde mais escuro */
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #e91e63; /* Rosa */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Somatório de Divisíveis por 3 ou 5</h1>
+  <label for="numero">Digite um número inteiro:</label>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <br>
+  <button onclick="calcularSomatorio()">Calcular</button>
+  <div id="resultado"></div>
+</div>
+
+<script>
+  function calcularSomatorio() {
+    const numero = document.getElementById('numero').value;
+    const resultadoElement = document.getElementById('resultado');
+
+    if (numero === "") {
+      resultadoElement.textContent = "Por favor, digite um número.";
+    } else {
+      const resultado = somatorioDivisiveis3e5(parseInt(numero));
+      resultadoElement.textContent = `O somatório dos divisíveis por 3 ou 5 é: ${resultado}`;
+    }
+  }
+
+  function somatorioDivisiveis3e5(numero) {
+    let soma = 0;
+
+    for (let i = 1; i < numero; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        soma += i;
+      }
+    }
+
+    return soma;
+  }
+</script>
+
+</body>
+</html>

@@ -13,3 +13,4 @@ Após inserir o número, clique no botão "Calcular" e observe a mágica acontec
 
 Abaixo do botão, você verá a mensagem indicando o somatório dos números divisíveis por 3 ou 5. Experimente! Como a Escribo Play é uma plataforma voltada para o ensino infantil, decidi por usar cores mais chamativas para as crianças usando tags HTML.
 Sinta-se à vontade para experimentar com diferentes números e explore como o somatório varia. Este projeto foi criado de maneira simples para tornar a experiência fácil e agradável. Enjoy! 🚀
+# desafio-Escribo
